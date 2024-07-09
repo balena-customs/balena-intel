@@ -21,6 +21,14 @@ BALENA_BOOT_PARTITION_FILES = " \
     grub_extraenv:/EFI/BOOT/grub_extraenv \
     "
 
+BALENA_BOOT_PARTITION_FILES:genericx86 = " \
+    grub:/grub/ \
+    grubenv:/grub/grubenv \
+    grub/i386-pc:/grub/i386-pc/ \
+    grub_extraenv:/grub/grub_extraenv \
+    grub.cfg_internal:/grub/grub.cfg \
+    "
+
 write_mbr() {
     # Write MBR with first stage bootloader
     dd if=${DEPLOY_DIR_IMAGE}/grub/boot.img of=${BALENA_RAW_IMG} conv=notrunc bs=1
