@@ -556,3 +556,9 @@ BALENA_CONFIGS[i2c-dev] = " \
     CONFIG_I2C=y \
     CONFIG_I2C_CHARDEV=m \
     "
+
+# Intel PowerVR SGX545
+BALENA_CONFIGS:append:genericx86 = " drm-gma500"
+BALENA_CONFIGS[drm-gma500] = " \
+    CONFIG_DRM_GMA500=y \
+"
