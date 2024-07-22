@@ -423,6 +423,10 @@ BALENA_CONFIGS[igc] = " \
     CONFIG_IGC=m \
 "
 
+SRC_URI:append:genericx86 = " \
+    file://0001-force-edp-to-lvds.patch \
+"
+
 # We get these patches from https://github.com/libcamera-org/linux/tree/surface/v5.8.18-yocto
 SRC_URI:append:surface-go = " \
     file://0001-ARM-LPAE-Invalidate-the-TLB-for-module-addresses-dur.patch \
